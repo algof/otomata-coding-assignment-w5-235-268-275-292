@@ -15,6 +15,7 @@ def run_moore(data):
         path.append(current_state)
         output.append(states[current_state])
 
+    print("Input:", test_string)
     print("Path:", " → ".join(path))
     print("Output:", "".join(output))
 
