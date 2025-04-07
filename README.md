@@ -59,6 +59,16 @@
     run_moore(data)
     ```
 
+- Explanation src_1:  
+
+Fungsi run_moore(data) menjalankan proses simulasi Moore Machine. Variabel *data* menyimpan data input berbentuk JSON. Langkah pertama yang dilakukan dalam fungsi adalah mengambil data dari dictionary *data* yang kemudian kedalam variabel states, transitions, initial_state, dan test_string.  
+
+Langkah berikutnya adalah melakukan initialisasi state awal. Hal ini dilakukand dengan mengisi current_state dengan initial_state, mengisi list path dengan current_state, dan mengisi list output dengan output dari current_state (memanfaatkan dictionary).  
+
+Kemudian dibuat loop untuk setiap karakter pada test_string alias symbol. Setiap symbol akan diperiksa, current_state akan diganti dengan next state sesuai dengan current_state dan symbol pada transition (memanfaatkan nested dictionary untuk mencari next state). Current_state yang baru kemudian akan ditambahkan ke dalam list path. Kemudian output dari current_state yang baru juga akan ditambahkan ke dalam list output. Hal ini akan diulang hingga mencapai akhir dari test_string.
+
+Langkah terakhir yang dilakukan adalah melakukan printing mulai dari input, path, dan output (memanfaatkan join elemen dari list).
+
 - Source code 2
     ```py
     import json
@@ -95,4 +105,6 @@
         print("Error: Format JSON tidak valid.")
     ```
 
-- Explanation
+- Explanation src_2:  
+
+Untuk mempermudah pengetesan dengan input yang bervariasi maka kami membuat modifikasi kode agar input dapat diperoleh dengan membaca file. Hal ini membuat kode menjadi lebih modular dalam menerima input sebab tidak perlu mengubah kode hanya perlu mengubah isi file input.  
