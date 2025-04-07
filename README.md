@@ -63,7 +63,7 @@
 
 Fungsi run_moore(data) menjalankan proses simulasi Moore Machine. Variabel *data* menyimpan data input berbentuk JSON. Langkah pertama yang dilakukan dalam fungsi adalah mengambil data dari dictionary *data* yang kemudian kedalam variabel states, transitions, initial_state, dan test_string.  
 
-Langkah berikutnya adalah melakukan initialisasi state awal. Hal ini dilakukand dengan mengisi current_state dengan initial_state, mengisi list path dengan current_state, dan mengisi list output dengan output dari current_state (memanfaatkan dictionary).  
+Langkah berikutnya adalah melakukan inisialisasi state awal. Hal ini dilakukan dengan mengisi current_state dengan initial_state, mengisi list path dengan current_state, dan mengisi list output dengan output dari current_state (memanfaatkan dictionary).  
 
 Kemudian dibuat loop untuk setiap karakter pada test_string alias symbol. Setiap symbol akan diperiksa, current_state akan diganti dengan next state sesuai dengan current_state dan symbol pada transition (memanfaatkan nested dictionary untuk mencari next state). Current_state yang baru kemudian akan ditambahkan ke dalam list path. Kemudian output dari current_state yang baru juga akan ditambahkan ke dalam list output. Hal ini akan diulang hingga mencapai akhir dari test_string.
 
